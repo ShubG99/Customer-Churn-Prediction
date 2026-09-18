@@ -1,0 +1,120 @@
+# ==============================================================================
+# Optuna Hyperparameter Optimization Search Spaces
+# ==============================================================================
+
+xgboost:
+  n_estimators:
+    type: "int"
+    low: 100
+    high: 600
+    step: 50
+  max_depth:
+    type: "int"
+    low: 3
+    high: 10
+  learning_rate:
+    type: "float"
+    low: 0.01
+    high: 0.25
+    log: true
+  subsample:
+    type: "float"
+    low: 0.6
+    high: 1.0
+  colsample_bytree:
+    type: "float"
+    low: 0.5
+    high: 1.0
+  min_child_weight:
+    type: "int"
+    low: 1
+    high: 10
+  gamma:
+    type: "float"
+    low: 0.0
+    high: 5.0
+  scale_pos_weight:
+    type: "float"
+    low: 1.0
+    high: 7.0 # To address the 7:1 class imbalance
+  reg_alpha:
+    type: "float"
+    low: 1e-4
+    high: 10.0
+    log: true
+  reg_lambda:
+    type: "float"
+    low: 1e-4
+    high: 10.0
+    log: true
+
+lightgbm:
+  n_estimators:
+    type: "int"
+    low: 100
+    high: 600
+    step: 50
+  max_depth:
+    type: "int"
+    low: 3
+    high: 12
+  num_leaves:
+    type: "int"
+    low: 20
+    high: 256
+  learning_rate:
+    type: "float"
+    low: 0.01
+    high: 0.25
+    log: true
+  subsample:
+    type: "float"
+    low: 0.6
+    high: 1.0
+  colsample_bytree:
+    type: "float"
+    low: 0.5
+    high: 1.0
+  min_child_samples:
+    type: "int"
+    low: 10
+    high: 100
+  scale_pos_weight:
+    type: "float"
+    low: 1.0
+    high: 7.0
+  reg_alpha:
+    type: "float"
+    low: 1e-4
+    high: 10.0
+    log: true
+  reg_lambda:
+    type: "float"
+    low: 1e-4
+    high: 10.0
+    log: true
+
+random_forest:
+  n_estimators:
+    type: "int"
+    low: 100
+    high: 500
+    step: 50
+  max_depth:
+    type: "int"
+    low: 5
+    high: 25
+  min_samples_split:
+    type: "int"
+    low: 2
+    high: 20
+  min_samples_leaf:
+    type: "int"
+    low: 1
+    high: 10
+  max_features:
+    type: "categorical"
+    choices: ["sqrt", "log2", 0.5, 0.7]
+  class_weight:
+    type: "categorical"
+    choices: ["balanced", "balanced_subsample"]

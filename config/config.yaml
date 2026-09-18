@@ -1,0 +1,141 @@
+# ==============================================================================
+# Telecom Customer Churn Prediction - Master Pipeline Configuration
+# ==============================================================================
+
+project:
+  name: "telecom-customer-churn-prediction"
+  version: "1.0.0"
+  description: "End-to-End Production ML Pipeline for Telecom Customer Churn Prediction"
+  seed: 42
+
+data:
+  raw_data_path: "data/raw/telecom_churn_280k.csv"
+  sample_data_path: "data/sample_data.json"
+  train_data_path: "data/processed/train.parquet"
+  test_data_path: "data/processed/test.parquet"
+  n_samples: 280000
+  test_size: 0.20
+  random_state: 42
+  target_column: "churn"
+  id_column: "customer_id"
+  imbalance_ratio: "7:1" # Approx 12.5% positive churn rate
+
+features:
+  numeric_features:
+    - "tenure_months"
+    - "monthly_charges"
+    - "total_charges"
+    - "data_usage_gb_m1"
+    - "data_usage_gb_m2"
+    - "data_usage_gb_m3"
+    - "voice_minutes_m1"
+    - "voice_minutes_m2"
+    - "voice_minutes_m3"
+    - "sms_count_m1"
+    - "sms_count_m2"
+    - "sms_count_m3"
+    - "roaming_usage_m1"
+    - "roaming_usage_m2"
+    - "roaming_usage_m3"
+    - "support_calls_m1"
+    - "support_calls_m2"
+    - "support_calls_m3"
+    - "unresolved_tickets_count"
+    - "csat_score"
+    - "days_since_last_support_call"
+    - "late_payments_count_12m"
+    - "payment_failures_count_12m"
+    - "avg_call_duration_sec"
+    - "data_overage_charge"
+    - "streaming_data_usage_gb"
+    - "days_until_contract_renewal"
+    - "bill_shock_index"
+    - "usage_decline_ratio"
+    - "arpu_per_gb"
+    - "support_call_frequency"
+    - "payment_risk_score"
+    - "bundled_services_count"
+    - "contract_commitment_ratio"
+    - "voice_to_data_ratio"
+    - "roaming_share"
+    - "weekend_usage_share"
+    - "customer_lifetime_value"
+    - "dispute_rate"
+    - "promotional_discount_active_pct"
+  
+  categorical_features:
+    - "gender"
+    - "senior_citizen"
+    - "partner"
+    - "dependents"
+    - "phone_service"
+    - "multiple_lines"
+    - "internet_service_type"
+    - "online_security"
+    - "online_backup"
+    - "device_protection"
+    - "tech_support"
+    - "streaming_tv"
+    - "streaming_movies"
+    - "contract_type"
+    - "paperless_billing"
+    - "payment_method"
+    - "plan_tier"
+
+preprocessing:
+  imputation:
+    numeric_strategy: "median"
+    categorical_strategy: "most_frequent"
+  scaling: "standard"
+  encoding: "onehot"
+  smote:
+    enabled: true
+    sampling_strategy: 0.50
+    k_neighbors: 5
+    random_state: 42
+
+training:
+  cv_folds: 5
+  cv_strategy: "StratifiedKFold"
+  scoring_metric: "roc_auc"
+  candidate_models:
+    - "logistic_regression"
+    - "random_forest"
+    - "extra_trees"
+    - "gradient_boosting"
+    - "xgboost"
+    - "lightgbm"
+
+optuna:
+  n_trials: 200
+  timeout_seconds: 1800
+  study_name: "telecom-churn-optuna-study"
+  direction: "maximize"
+  pruner: "MedianPruner"
+  top_models_to_tune:
+    - "xgboost"
+    - "lightgbm"
+    - "random_forest"
+
+artifacts:
+  models_dir: "models"
+  best_model_path: "models/best_model.joblib"
+  preprocessor_path: "models/preprocessor.joblib"
+  pipeline_path: "models/full_pipeline.joblib"
+  metrics_path: "models/evaluation_metrics.json"
+  shap_explainer_path: "models/shap_explainer.joblib"
+  feature_importance_path: "models/feature_importance.json"
+  figures_dir: "reports/figures"
+  model_card_path: "MODEL_CARD.md"
+
+mlflow:
+  tracking_uri: "sqlite:///mlruns.db"
+  experiment_name: "Telecom_Customer_Churn_Prediction"
+  log_models: true
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  title: "Telecom Customer Churn Prediction Service"
+  version: "1.0.0"
+  description: "Production REST API for Real-time and Batch Churn Risk Inference & SHAP Explainability"

@@ -1,0 +1,31 @@
+# ==============================================================================
+# FastAPI Serving & Inference Service Configuration
+# ==============================================================================
+
+server:
+  host: "0.0.0.0"
+  port: 8000
+  reload: false
+  workers: 1
+  log_level: "info"
+
+model:
+  best_model_path: "models/best_model.joblib"
+  preprocessor_path: "models/preprocessor.joblib"
+  pipeline_path: "models/full_pipeline.joblib"
+  shap_explainer_path: "models/shap_explainer.joblib"
+  metrics_path: "models/evaluation_metrics.json"
+
+inference:
+  churn_threshold: 0.50
+  high_risk_threshold: 0.70
+  medium_risk_threshold: 0.40
+  max_batch_size: 50000
+  enable_shap_on_predict: true
+  top_n_drivers: 5
+
+cors:
+  allow_origins: ["*"]
+  allow_credentials: true
+  allow_methods: ["*"]
+  allow_headers: ["*"]
