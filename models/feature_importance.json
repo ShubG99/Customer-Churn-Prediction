@@ -1,0 +1,470 @@
+[
+  {
+    "feature": "low_csat_flag",
+    "importance": 0.55149
+  },
+  {
+    "feature": "csat_score",
+    "importance": 0.15915
+  },
+  {
+    "feature": "late_payments_count_12m",
+    "importance": 0.0285
+  },
+  {
+    "feature": "sentiment_risk_score",
+    "importance": 0.02078
+  },
+  {
+    "feature": "late_payment_rate_annual",
+    "importance": 0.01467
+  },
+  {
+    "feature": "high_csat_flag",
+    "importance": 0.01309
+  },
+  {
+    "feature": "internet_service_type_Fiber optic",
+    "importance": 0.01154
+  },
+  {
+    "feature": "is_month_to_month",
+    "importance": 0.01029
+  },
+  {
+    "feature": "dispute_rate",
+    "importance": 0.00977
+  },
+  {
+    "feature": "payment_risk_score",
+    "importance": 0.00839
+  },
+  {
+    "feature": "tech_support_No internet service",
+    "importance": 0.00805
+  },
+  {
+    "feature": "has_payment_trouble",
+    "importance": 0.00704
+  },
+  {
+    "feature": "payment_failure_rate_annual",
+    "importance": 0.00573
+  },
+  {
+    "feature": "online_backup_No internet service",
+    "importance": 0.00568
+  },
+  {
+    "feature": "contract_type_Month-to-month",
+    "importance": 0.00448
+  },
+  {
+    "feature": "payment_failures_count_12m",
+    "importance": 0.00424
+  },
+  {
+    "feature": "support_call_frequency",
+    "importance": 0.0042
+  },
+  {
+    "feature": "tech_support_No",
+    "importance": 0.00418
+  },
+  {
+    "feature": "data_usage_volatility",
+    "importance": 0.00411
+  },
+  {
+    "feature": "paperless_billing_No",
+    "importance": 0.00411
+  },
+  {
+    "feature": "partner_Yes",
+    "importance": 0.00394
+  },
+  {
+    "feature": "electronic_check_flag",
+    "importance": 0.00377
+  },
+  {
+    "feature": "online_security_No",
+    "importance": 0.00365
+  },
+  {
+    "feature": "tenure_years",
+    "importance": 0.00356
+  },
+  {
+    "feature": "contract_commitment_ratio",
+    "importance": 0.00356
+  },
+  {
+    "feature": "payment_method_Electronic check",
+    "importance": 0.00337
+  },
+  {
+    "feature": "paperless_billing_Yes",
+    "importance": 0.00322
+  },
+  {
+    "feature": "has_unresolved_disputes",
+    "importance": 0.00309
+  },
+  {
+    "feature": "multiple_lines_Yes",
+    "importance": 0.00301
+  },
+  {
+    "feature": "internet_service_type_DSL",
+    "importance": 0.00301
+  },
+  {
+    "feature": "monthly_charges",
+    "importance": 0.00272
+  },
+  {
+    "feature": "partner_No",
+    "importance": 0.00271
+  },
+  {
+    "feature": "streaming_bundle_active",
+    "importance": 0.00266
+  },
+  {
+    "feature": "contract_type_One year",
+    "importance": 0.00243
+  },
+  {
+    "feature": "internet_service_type_No",
+    "importance": 0.0024
+  },
+  {
+    "feature": "automatic_payment_flag",
+    "importance": 0.00231
+  },
+  {
+    "feature": "dependents_No",
+    "importance": 0.00209
+  },
+  {
+    "feature": "unresolved_tickets_count",
+    "importance": 0.00203
+  },
+  {
+    "feature": "tech_support_Yes",
+    "importance": 0.00198
+  },
+  {
+    "feature": "data_usage_gb_m1",
+    "importance": 0.00196
+  },
+  {
+    "feature": "usage_decline_ratio",
+    "importance": 0.00185
+  },
+  {
+    "feature": "data_usage_trend_3m",
+    "importance": 0.00181
+  },
+  {
+    "feature": "voice_minutes_trend_3m",
+    "importance": 0.00181
+  },
+  {
+    "feature": "tenure_months",
+    "importance": 0.00177
+  },
+  {
+    "feature": "multiple_lines_No",
+    "importance": 0.00171
+  },
+  {
+    "feature": "support_call_acceleration",
+    "importance": 0.0017
+  },
+  {
+    "feature": "support_calls_m3",
+    "importance": 0.00167
+  },
+  {
+    "feature": "streaming_movies_Yes",
+    "importance": 0.00166
+  },
+  {
+    "feature": "online_security_Yes",
+    "importance": 0.00158
+  },
+  {
+    "feature": "plan_tier_Enterprise",
+    "importance": 0.00158
+  },
+  {
+    "feature": "dependents_Yes",
+    "importance": 0.00137
+  },
+  {
+    "feature": "bundled_services_count",
+    "importance": 0.00129
+  },
+  {
+    "feature": "senior_citizen",
+    "importance": 0.00121
+  },
+  {
+    "feature": "sms_count_m3",
+    "importance": 0.0012
+  },
+  {
+    "feature": "family_plan_profile",
+    "importance": 0.00111
+  },
+  {
+    "feature": "streaming_tv_Yes",
+    "importance": 0.00109
+  },
+  {
+    "feature": "total_charges",
+    "importance": 0.00107
+  },
+  {
+    "feature": "arpu_per_gb",
+    "importance": 0.00107
+  },
+  {
+    "feature": "payment_method_Credit card (automatic)",
+    "importance": 0.00106
+  },
+  {
+    "feature": "unresolved_ticket_rate",
+    "importance": 0.00105
+  },
+  {
+    "feature": "has_recent_support_crisis",
+    "importance": 0.00105
+  },
+  {
+    "feature": "plan_tier_Standard",
+    "importance": 0.00103
+  },
+  {
+    "feature": "tech_security_bundle_score",
+    "importance": 0.00102
+  },
+  {
+    "feature": "charges_per_tenure_month",
+    "importance": 0.00102
+  },
+  {
+    "feature": "plan_tier_Basic",
+    "importance": 0.00098
+  },
+  {
+    "feature": "data_usage_gb_m2",
+    "importance": 0.00097
+  },
+  {
+    "feature": "phone_service_No",
+    "importance": 0.00097
+  },
+  {
+    "feature": "streaming_movies_No",
+    "importance": 0.00094
+  },
+  {
+    "feature": "payment_method_Bank transfer (automatic)",
+    "importance": 0.00094
+  },
+  {
+    "feature": "customer_lifetime_value",
+    "importance": 0.00093
+  },
+  {
+    "feature": "device_protection_Yes",
+    "importance": 0.00093
+  },
+  {
+    "feature": "days_until_contract_renewal",
+    "importance": 0.00092
+  },
+  {
+    "feature": "promotional_discount_active_pct",
+    "importance": 0.00088
+  },
+  {
+    "feature": "support_calls_total_3m",
+    "importance": 0.00088
+  },
+  {
+    "feature": "streaming_data_usage_gb",
+    "importance": 0.00087
+  },
+  {
+    "feature": "plan_tier_Premium",
+    "importance": 0.00086
+  },
+  {
+    "feature": "sms_count_trend_3m",
+    "importance": 0.00085
+  },
+  {
+    "feature": "data_usage_mean_3m",
+    "importance": 0.00081
+  },
+  {
+    "feature": "device_protection_No",
+    "importance": 0.00081
+  },
+  {
+    "feature": "gender_Female",
+    "importance": 0.0008
+  },
+  {
+    "feature": "streaming_tv_No",
+    "importance": 0.00078
+  },
+  {
+    "feature": "support_calls_m1",
+    "importance": 0.00075
+  },
+  {
+    "feature": "support_calls_m2",
+    "importance": 0.00073
+  },
+  {
+    "feature": "data_usage_gb_m3",
+    "importance": 0.00072
+  },
+  {
+    "feature": "sms_count_mean_3m",
+    "importance": 0.00072
+  },
+  {
+    "feature": "voice_to_data_ratio",
+    "importance": 0.00071
+  },
+  {
+    "feature": "voice_minutes_m1",
+    "importance": 0.00069
+  },
+  {
+    "feature": "roaming_share",
+    "importance": 0.00068
+  },
+  {
+    "feature": "bill_shock_index",
+    "importance": 0.00067
+  },
+  {
+    "feature": "payment_method_Mailed check",
+    "importance": 0.00067
+  },
+  {
+    "feature": "online_backup_No",
+    "importance": 0.00065
+  },
+  {
+    "feature": "streaming_data_share",
+    "importance": 0.00064
+  },
+  {
+    "feature": "voice_minutes_m3",
+    "importance": 0.00062
+  },
+  {
+    "feature": "sms_count_m1",
+    "importance": 0.00061
+  },
+  {
+    "feature": "roaming_usage_m1",
+    "importance": 0.00061
+  },
+  {
+    "feature": "online_backup_Yes",
+    "importance": 0.00061
+  },
+  {
+    "feature": "days_since_last_support_call",
+    "importance": 0.0006
+  },
+  {
+    "feature": "voice_minutes_m2",
+    "importance": 0.00058
+  },
+  {
+    "feature": "roaming_usage_m2",
+    "importance": 0.00057
+  },
+  {
+    "feature": "sms_count_m2",
+    "importance": 0.00054
+  },
+  {
+    "feature": "avg_call_duration_sec",
+    "importance": 0.00054
+  },
+  {
+    "feature": "gender_Male",
+    "importance": 0.00052
+  },
+  {
+    "feature": "voice_minutes_mean_3m",
+    "importance": 0.00051
+  },
+  {
+    "feature": "roaming_usage_m3",
+    "importance": 0.0005
+  },
+  {
+    "feature": "discount_cliff_risk",
+    "importance": 0.00048
+  },
+  {
+    "feature": "phone_service_Yes",
+    "importance": 0.00021
+  },
+  {
+    "feature": "data_overage_charge",
+    "importance": 0.0
+  },
+  {
+    "feature": "data_overage_to_charge_ratio",
+    "importance": 0.0
+  },
+  {
+    "feature": "has_data_overage",
+    "importance": 0.0
+  },
+  {
+    "feature": "is_two_year_contract",
+    "importance": 0.0
+  },
+  {
+    "feature": "is_contract_expiring_soon",
+    "importance": 0.0
+  },
+  {
+    "feature": "multiple_lines_No phone service",
+    "importance": 0.0
+  },
+  {
+    "feature": "online_security_No internet service",
+    "importance": 0.0
+  },
+  {
+    "feature": "device_protection_No internet service",
+    "importance": 0.0
+  },
+  {
+    "feature": "streaming_tv_No internet service",
+    "importance": 0.0
+  },
+  {
+    "feature": "streaming_movies_No internet service",
+    "importance": 0.0
+  },
+  {
+    "feature": "contract_type_Two year",
+    "importance": 0.0
+  }
+]

@@ -1,0 +1,98 @@
+{
+  "model_type": "XGBClassifier",
+  "test_metrics": {
+    "roc_auc": 0.996,
+    "pr_auc": 0.9736,
+    "f1_score": 0.8994,
+    "f1_macro": 0.9422,
+    "precision": 0.8711,
+    "recall": 0.9296,
+    "specificity": 0.9803,
+    "accuracy": 0.974,
+    "balanced_accuracy": 0.955,
+    "log_loss": 0.0585,
+    "brier_score": 0.0183,
+    "true_positives": 581,
+    "false_positives": 86,
+    "true_negatives": 4289,
+    "false_negatives": 44
+  },
+  "cv_leaderboard": [
+    {
+      "Model": "logistic_regression",
+      "Mean AUC-ROC": 0.99652,
+      "Std AUC-ROC": 0.00042614551505324713,
+      "Mean F1": 0.8936200000000001,
+      "Mean PR-AUC": 0.9775600000000001,
+      "Mean Precision": 0.8305199999999999,
+      "Mean Recall": 0.9672000000000001,
+      "Mean Accuracy": 0.97118
+    },
+    {
+      "Model": "xgboost",
+      "Mean AUC-ROC": 0.99404,
+      "Std AUC-ROC": 0.0007282856582413228,
+      "Mean F1": 0.87138,
+      "Mean PR-AUC": 0.9623799999999999,
+      "Mean Precision": 0.8172,
+      "Mean Recall": 0.9336,
+      "Mean Accuracy": 0.9655799999999999
+    },
+    {
+      "Model": "lightgbm",
+      "Mean AUC-ROC": 0.99384,
+      "Std AUC-ROC": 0.0005571355310873847,
+      "Mean F1": 0.87386,
+      "Mean PR-AUC": 0.96064,
+      "Mean Precision": 0.8267599999999999,
+      "Mean Recall": 0.9268000000000001,
+      "Mean Accuracy": 0.96652
+    },
+    {
+      "Model": "gradient_boosting",
+      "Mean AUC-ROC": 0.9924,
+      "Std AUC-ROC": 0.0009077444574328274,
+      "Mean F1": 0.8581199999999999,
+      "Mean PR-AUC": 0.95258,
+      "Mean Precision": 0.79924,
+      "Mean Recall": 0.9268000000000001,
+      "Mean Accuracy": 0.9616999999999999
+    },
+    {
+      "Model": "random_forest",
+      "Mean AUC-ROC": 0.98844,
+      "Std AUC-ROC": 0.0012026637102698493,
+      "Mean F1": 0.8267,
+      "Mean PR-AUC": 0.9265000000000001,
+      "Mean Precision": 0.74902,
+      "Mean Recall": 0.9228,
+      "Mean Accuracy": 0.9516600000000001
+    },
+    {
+      "Model": "extra_trees",
+      "Mean AUC-ROC": 0.98708,
+      "Std AUC-ROC": 0.0009260669522232221,
+      "Mean F1": 0.77908,
+      "Mean PR-AUC": 0.9239799999999999,
+      "Mean Precision": 0.6545,
+      "Mean Recall": 0.9623999999999999,
+      "Mean Accuracy": 0.9317399999999999
+    }
+  ],
+  "best_hyperparameters": {
+    "n_estimators": 450,
+    "max_depth": 6,
+    "learning_rate": 0.0728274817308901,
+    "subsample": 0.8057823938612643,
+    "colsample_bytree": 0.6246748798409811,
+    "min_child_weight": 3,
+    "gamma": 0.817465184723088,
+    "scale_pos_weight": 6.0765562648801295,
+    "reg_alpha": 0.0003529271033222384,
+    "reg_lambda": 4.175368524517978
+  },
+  "training_samples": 20000,
+  "test_samples": 5000,
+  "imbalance_ratio": "7:1",
+  "features_count": 117
+}
